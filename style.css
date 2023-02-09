@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
+:root {
+  --main-color: #7f00ff;
+  --main-color-alt: #3d535f;
+  /* --transparent-color: #b9a4a4; */
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  margin-top: 10px;
+}
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 80px;
+  z-index: 111;
+}
+.logo {
+  display: flex;
+  font-size: 40px;
+  font-weight: 800;
+  color: #3d535f;
+}
+b {
+  font-size: 50px;
+  color: #7f00ff;
+}
+.navItems {
+  display: flex;
+}
+.navItems li {
+  list-style: none;
+  margin: 0 15px;
+}
+.navItems li a {
+  font-size: 20px;
+  color: #3d535f;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.navItems li:hover a,
+.links a:hover {
+  color: var(--main-color);
+}
+.links a {
+  font-size: 25px;
+  color: #3d535f;
+  margin: 25px 10px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 70px);
+  justify-content: start;
+  align-items: center;
+  padding: 0 10%;
+  /* overflow: hidden; */
+}
+.wrapper::before {
+    position: absolute;
+    content: '';
+    height: 380px;
+    width: 380px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg,#7f00ff, #bcd4e0);
+    animation:object1 6s linear infinite ;
+    -webkit-animation:object1 6s linear infinite ;
+}
+.wrapper::after {
+    position: absolute;
+    content: '';
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg,#7f00ff, #bcd4e0);
+    animation:object1 6s linear infinite ;
+    -webkit-animation:object2 6s linear infinite ;
+}
+ @keyframes object1{
+    50%{
+        left: -7%;
+        top: 41%;
+    }
+ }
+ @keyframes object2{
+    50%{
+        left: 35%;
+        top: 17%;
+    }
+ }
+.cols-cols0 {
+  width: 60%;
+  z-index: 5;
+}
+.cols-cols1{
+  margin-top: 150px;
+
+}
+.topline {
+  display: block;
+  position: relative;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: #3d535f;
+}
+.topline::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 45px;
+  bottom: 10px;
+  background-color: #7f00ff;
+}
+h1 {
+  display: block;
+  font-size: 5em;
+  font-weight: 900;
+  color: #3d535f;
+}
+.multiText {
+  color: #7f00ff;
+  text-transform: capitalize;
+}
+p {
+  display: block;
+  width: 90%;
+  font-size: 1.2em;
+  color: #3d535f;
+}
+a{
+    text-decoration: none;
+}
+.btns {
+  width: 100%;
+  position: relative;
+  left: 150px;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #3d535f;
+  padding: 8px 14px;
+  margin: 40px 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow: 0 15px 10px  rgba(0, 0, 0, 0.4);
+}
+.btns button a{
+    color: #fff;
+    text-decoration: none;
+}
+.btns button a:visited{
+color: #a48bbd;
+}
+button:hover{
+    background-color: var(--main-color);
+}
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgbox img{
+    position: relative;
+    height: 90%;
+    width: calc(130% -80px);
+    top: -100px;
+    right: 80px;
+    /*transform: rotateY(180deg);
+    */
+    animation: animateUser 4s linear  infinite;
+}
+@keyframes animateUser{
+50%{
+   
+    top: -90px;
+}
+}
+.imgbox  #splash{
+    position: absolute;
+    top: 1%;
+    left:40% ;
+    bottom: 50%;
+    transform: translate(-65% ,-15%) ;
+    filter:saturate(200%);
+    animation: animate 10s linear  infinite;
+    -webkit-animation: animate 10s linear  infinite;
+    -webkit-transform: translate(-65% ,-15%) ;
+    -moz-transform: translate(-65% ,-15%) ;
+    -ms-transform: translate(-65% ,-15%) ;
+    -o-transform: translate(-65% ,-15%) ;
+}
+@keyframes animate{
+    50%{
+        right: 51px;
+        top: 59px;
+        height: 90%;
+        /* width: 250%; */
+    }
+    }
